@@ -1,0 +1,356 @@
+.row {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+}
+.column {
+  flex: 1;
+}
+
+.reveal b, .reveal strong {
+  font-weight: 400;
+}
+
+div .source,
+span .source {
+  font-size: 0.3em;
+}
+
+small.author-contact {
+  margin: 0 10px;
+}
+.author-icon {
+  height: 34px;
+}
+.author-img {
+  border-radius: 50%;
+  width: 3em;
+}
+
+.js-can {
+  padding-bottom: 3% !important;
+  white-space: nowrap;
+}
+.js-can * {
+  vertical-align: middle !important;
+}
+.js-can img {
+  width: 15%;
+}
+.js-can-content {
+  width: 65%;
+}
+
+#app-downloads-chart {
+  width: 90%;
+}
+
+#app-downloads-chart .ct-bar {
+  stroke-width: 100px;
+}
+#app-downloads-chart .ct-series-a .ct-bar {
+  stroke: #3B7BBE;
+}
+#app-downloads-chart .ct-series-b .ct-bar {
+  stroke: #69B978;
+}
+#app-downloads-chart .ct-label {
+  font-size: 0.6em;
+}
+
+img.enterprise-icon {
+  float: right;
+  height: 170px;
+}
+img.enterprise-icon.inline {
+  float: none;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 30px;
+}
+div.enterprise-figure {
+  font-size: 110px;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+div.pie-chart {
+  margin-bottom: 30px;
+}
+.pie-chart .ct-label {
+  display: none;
+}
+.pie-chart .ct-label:first-child {
+  display: block;
+  font-size: 110px;
+  font-weight: 400;
+  fill: #fff;
+}
+.pie-chart .ct-series-b .ct-slice-pie {
+  fill: #eee;
+}
+#hybrid-app-chart {
+  width: 80%;
+  margin: 0 auto;
+}
+#hybrid-app-chart .ct-series-a .ct-slice-pie {
+  fill: #69B978;
+}
+#enterprise-app-store-chart .ct-series-a .ct-slice-pie {
+  fill: #2C97A6;
+}
+#enterprise-on-the-road-chart .ct-series-a .ct-slice-pie {
+  fill: #1E5A96;
+}
+
+#hybrid-app-chart .ct-label {
+  font-size: 100px;
+}
+
+#enterprise-app-store-chart .ct-label:first-child {
+  font-size: 100px;
+}
+#enterprise-on-the-road-chart .ct-label:first-child {
+  font-size: 75px;
+}
+
+.hybrid {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+}
+.hybrid-left,
+.hybrid-center,
+.hybrid-right {
+  flex: 1;
+  margin: 0 5px !important;
+}
+.hybrid-center img {
+  width: 70%;
+}
+.hybrid-left .hybrid-box {
+  background-color: #1E5A96;
+}
+.hybrid-right .hybrid-box {
+  background-color: #61B44B;
+}
+.hybrid-box {
+  padding: 20px !important;
+  color: #fff;
+  font-size: 0.6em !important;
+}
+
+.hybrid-apps-overview .hybrid-left,
+.hybrid-apps-overview .hybrid-right {
+  padding: 10px;
+  background-color: #eee;
+}
+.hybrid-logos {
+  margin: 30px 0 20px 0 !important;
+}
+.hybrid-logos * {
+  display: inline-block;
+  width: 20%;
+  margin: 0 2% !important;
+  vertical-align: middle !important;
+}
+
+#hybrid-technologies .row {
+  align-items: stretch;
+}
+#hybrid-technologies .column {
+  padding: 70px 20px;
+  color: #fff;
+}
+#hybrid-technologies .fragment {
+  opacity: 1 !important;
+  visibility: visible !important;
+  border: 10px solid transparent;
+}
+#hybrid-technologies .current-fragment {
+  border-color: #e1ce69;
+}
+#hybrid-technologies .webapp {
+  background-color: #61B44B;
+}
+#hybrid-technologies .webview {
+  background-color: #2C97A6;
+}
+#hybrid-technologies .bridged {
+  background-color: #3B7BBE;
+}
+#hybrid-technologies .native {
+  background-color: #1E5A96;
+}
+#hybrid-technologies.extremes .bridged,
+#hybrid-technologies.extremes .webview {
+  opacity: 0.2 !important;
+}
+
+#cordova-architecture {
+  position: relative;
+  font-size: 67%;
+  color: #fff;
+  width: 78%;
+  float: right;
+}
+#cordova-architecture div {
+  padding: 13px;
+  margin-top: 13px;
+}
+#cordova-architecture .fragment {
+  opacity: 1 !important;
+  visibility: visible !important;
+  background-color: transparent;
+  color: transparent;
+  border-color: transparent;
+}
+#cordova-architecture .fragment.visible {
+  color: #fff;
+}
+
+#cordova-architecture .cli-sdk-container {
+  position: absolute;
+  margin-top: 0;
+  top: -26px;
+  left: -223px;
+}
+#cordova-architecture .cli-container {
+  padding: 0;
+}
+#cordova-architecture .sdk,
+#cordova-architecture .cli {
+  width: 135px;
+}
+#cordova-architecture .cli {
+  display: inline-block;
+  margin-top: 0;
+}
+#cordova-architecture .cli-arrow {
+  display: inline-block;
+  float: right;
+  margin-top: 18px;
+}
+
+#cordova-architecture .cli-sdk-container.visible {
+  color: #444;
+}
+#cordova-architecture .cli-sdk-container.visible .cli {
+  background-color: #e1ce69;
+  color: #444;
+}
+#cordova-architecture .cli-sdk-container.visible .sdk {
+  background-color: #2C97A6;
+  color: #fff;
+}
+#cordova-architecture .wrapper.visible {
+  background-color: #3B7BBE;
+}
+#cordova-architecture .webview.visible {
+  background-color: #69B978;
+}
+#cordova-architecture .webapp {
+  border: 3px solid #fff;
+  background-color: #61B44B;
+  color: #fff !important;
+}
+#cordova-architecture .jsapi.visible {
+  background-color: #e1ce69;
+  color: #444;
+}
+#cordova-architecture .row.visible .plugin {
+  background-color: #e1ce69;
+  color: #444;
+}
+#cordova-architecture .mobileos.visible {
+  background-color: #1E5A96;
+}
+#cordova-architecture .mobileos.visible .deviceapi {
+  background-color: #3B7BBE;
+}
+
+#cordova-architecture .wrapper,
+#cordova-architecture .mobileos {
+  text-align: left;
+}
+#cordova-architecture .webview *,
+#cordova-architecture .plugin,
+#cordova-architecture .deviceapi {
+  text-align: center;
+}
+
+#cordova-architecture .wrapper,
+#cordova-architecture .mobileos {
+  margin-top: 0;
+}
+
+#cordova-architecture .row {
+  margin: 0;
+  padding: 0;
+}
+#cordova-architecture .column {
+  margin-right: 13px;
+}
+#cordova-architecture .column:last-child {
+  margin-right: 0;
+}
+
+#cordova-workflow {
+  font-size: 67%;
+}
+#cordova-workflow .step {
+  width: 35%;
+  padding: 20px;
+  margin: 5px auto;
+  font-family: monospace;
+  font-size: 70%;
+  background-color: #3B7BBE;
+  color: #fff;
+}
+
+.cordova-step .cordova-command,
+.cordova-step .cordova-projectdir{
+  padding: 20px;
+  margin: 5px auto;
+  font-family: monospace;
+  font-size: 70%;
+}
+.cordova-step .cordova-command {
+  background-color: #3B7BBE;
+  color: #fff;
+}
+.cordova-step .cordova-projectdir {
+  width: 40%;
+  background-color: #eee;
+  text-align: left;
+}
+.cordova-step .cordova-projectdir.muted {
+  color: #999;
+}
+.cordova-step .cordova-projectdir .highlight {
+  color: #444;
+}
+.cordova-step .cordova-projectdir .indented {
+  margin-left: 1em;;
+}
+.cordova-step.build .cordova-projectdir {
+  width: 50%;
+}
+.cordova-step.browser img {
+  height: 250px;
+}
+.cordova-step.plugins .cordova-projectdir {
+  width: 70%;
+}
+
+#example pre {
+  width: 100%;
+  font-size: 43%;
+}
+#example code {
+  max-height: none;
+}
+
+.lopas-screenshot {
+  width: 84%;
+}

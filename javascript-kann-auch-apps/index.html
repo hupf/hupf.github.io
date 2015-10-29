@@ -1,0 +1,643 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>JavaScript kann auch Apps</title>
+
+    <meta name="description" content="Apache Cordova ermöglicht das Entwickeln von Hybrid Apps für verschiedenste Mobile Plattformen mit Hilfe von Web Technologien und freier Software. Wie funktioniert dieser Ansatz? Was sind die Vor- und Nachteile?">
+    <meta name="author" content="Mathis Hofer">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/puzzle.css" id="theme">
+
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <link rel="stylesheet" href="lib/css/chartist.min.css">
+    <link rel="stylesheet" href="lib/css/custom.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+     var link = document.createElement( 'link' );
+     link.rel = 'stylesheet';
+     link.type = 'text/css';
+     link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+     document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="reveal">
+
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+
+        <section class="master01">
+          <img src="lib/img/puzzle_tagline_bg_rgb.svg">
+        </section>
+
+        <section class="master04">
+          <h1>JavaScript kann auch Apps</h1>
+          <div class="author">
+            Mathis Hofer<br>
+            <small>Senior Software Engineer</small><br>
+            <small class="author-contact">
+              <img class="author-icon" src="lib/img/icons/email.svg">
+              <a href="mailto:hofer@puzzle.ch">hofer@puzzle.ch</a>
+              <img class="author-icon" src="lib/img/icons/twitter.svg">
+              <a href="https://twitter.com/drhupf">@drhupf</a>
+            </small>
+          </div>
+        </section>
+
+        <section>
+          <img src="lib/img/tech-logos/javascript.svg">
+
+        </section>
+
+        <section>
+          <div class="js-can">
+            <img src="lib/img/tech-logos/javascript.svg">
+            kann Linux
+          </div>
+          <video class="js-can-content" data-autoplay src="lib/videos/jslinux.webm"></video>
+          <div class="source"><br>Quelle: <a href="http://bellard.org/jslinux/">bellard.org/jslinux/</a></div>
+        </section>
+
+        <section>
+          <div class="js-can">
+            <img src="lib/img/tech-logos/javascript.svg">
+            kann 3D Games
+          </div>
+          <video class="js-can-content" data-autoplay src="lib/videos/unreal.webm"></video>
+          <div class="source"><br>Quelle: <a href="https://blog.mozilla.org/blog/2014/03/12/mozilla-and-epic-preview-unreal-engine-4-running-in-firefox/">Mozilla and Epic Preview Unreal Engine 4 Running in Firefox</a></div>
+        </section>
+
+        <section>
+          <div class="js-can">
+            <img src="lib/img/tech-logos/javascript.svg">
+            kann Helikopter
+          </div>
+          <video class="js-can-content" data-autoplay src="lib/videos/nodecopter.webm"></video>
+          <div class="source"><br>Quelle: <a href="https://www.youtube.com/watch?v=gucpgJEJ5b4">
+NodeCopter impressions from Berlin 2012</a></div>
+        </section>
+
+        <section>
+          <div class="js-can">
+            <img src="lib/img/tech-logos/javascript.svg">
+            kann ...
+          </div>
+        </section>
+
+        <section data-transition="slide-in fade-out">
+          <div class="js-can">
+            <img src="lib/img/tech-logos/javascript.svg">
+            kann Mobile Apps
+          </div>
+        </section>
+
+        <section data-transition="fade-in slide-out">
+          <div class="js-can">
+            <img src="lib/img/tech-logos/html-5.svg"> +
+            <img src="lib/img/tech-logos/css-3.svg"> +
+            <img src="lib/img/tech-logos/javascript.svg"> +
+            <img src="lib/img/tech-logos/cordova.svg">
+          </div>
+        </section>
+
+        <section>
+          <img src="lib/img/photos/iphone.png" width="25%">
+          <div>Apple iPhone (2007)</div>
+        </section>
+
+        <section>
+          «You’ve got everything you need if you know how to write apps <b>using the most modern web standards</b> to <b>write amazing apps</b> for the iPhone today.»<br><br>
+          &mdash; Steve Jobs (2007)
+        </section>
+
+        <section data-state="app-downloads-chart" data-transition="slide-in fade-out">
+          <h3>Mobile App Downloads (in Mrd.)</h3>
+          <div id="app-downloads-chart" class="ct-chart ct-golden-section"></div>
+          <div class="source">Quelle: <a href="https://www.gartner.com/newsroom/id/2592315">Gartner (2013)</a></div>
+        </section>
+
+        <section data-transition="slide-in fade-out">
+          <h3>Apps in Unternehmen</h3>
+        </section>
+
+        <section data-transition="fade-in fade-out">
+          <div class="enterprise-figure">
+            <img class="enterprise-icon inline" src="lib/img/icons/iphone.svg">
+            + 72%
+          </div>
+          <div class="source">Quelle: <a href="https://www.citrix.com/content/dam/citrix/en_us/documents/products-solutions/citrix-mobile-analytics-report-february-2015.pdf">Citrix Mobile Analytics Report (2015)</a></div>
+        </section>
+
+        <section data-transition="fade-in slide-out">
+          <div class="enterprise-figure">
+            <img class="enterprise-icon inline" src="lib/img/icons/arrow-graph-up-right.svg">
+            + 34%
+          </div>
+          <div class="source">Quelle: <a href="http://www.theguardian.com/media-network/media-network-blog/2014/jun/19/mobile-enterprise-productivity-apps">Salesforce.com Studie (2014)</a></div>
+        </section>
+
+        <section data-state="hybrid-app-chart" data-transition="fade-in slide-out">
+          <h3>Hybrid-Anteil 2016</h3>
+          <div id="hybrid-app-chart" class="pie-chart ct-chart ct-golden-section"></div>
+          <div class="source"><br>Quelle: <a href="https://www.gartner.com/newsroom/id/2324917">Gartner Mobile and Wireless Predictions (2013)</a></div>
+        </section>
+
+
+        <section class="master02">
+          <h1>Hybrid Mobile Apps</h1>
+          mit Apache Cordova
+        </section>
+
+        <section>
+          <img src="lib/img/tech-logos/cordova.svg">
+        </section>
+
+        <section>
+          <h3>Geschichte</h3>
+          Nitobi Software entwickelt PhoneGap, 2009<br>
+          ↓<br>
+          Adobe übernimmt Nitobi, 2011<br>
+          ↓<br>
+          Freies Apache Projekt «Apache Cordova»
+        </section>
+
+        <section data-state="hybrid-technologies">
+          <h3>App Technologien</h3>
+          <div id="hybrid-technologies">
+            <div class="row">
+              <div class="column native fragment hybrid-technology" data-fragment-index="0">
+                Native<br>
+                <small>Android, iOS, Windows Phone</small>
+              </div>
+              <div class="column bridged fragment hybrid-technology" data-fragment-index="2">
+                Bridged Hybrid<br>
+                <small>Xamarin, Appcelerator, NativeScript, React Native</small>
+              </div>
+            </div>
+            <div class="row">
+              <div class="column webapp fragment hybrid-technology" data-fragment-index="1">
+                Web<br>
+                <small>AngularJS, React, Ember.js</small>
+              </div>
+              <div class="column webview fragment hybrid-technology" data-fragment-index="3">
+                WebView Hybrid<br>
+                <small>Cordova, Trigger.io, Ionic, AppGyver</small>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h3>Architektur</h3>
+          <div id="cordova-architecture">
+            <div class="cli-sdk-container fragment" data-fragment-index="1">
+              <div class="sdk">Mobile<br>SDK</div>
+              <div class="cli-container">
+                <div class="cli-arrow">→</div>
+                <div class="cli">Cordova<br>CLI</div>
+              </div>
+            </div>
+            <div class="wrapper fragment" data-fragment-index="1">
+              Native Application Wrapper
+              <div class="webview fragment" data-fragment-index="2">
+                WebView Component
+                <div class="webapp">Web Application</div>
+                <div class="jsapi fragment" data-fragment-index="5">Cordova JavaScript API</div>
+              </div>
+              <div class="row fragment" data-fragment-index="3">
+                <div class="plugin column">Core<br>Plugins</div>
+                <div class="plugin column">3rd Party<br>Plugins</div>
+                <div class="plugin column">Custom<br>Plugins</div>
+              </div>
+            </div>
+            <div class="mobileos fragment" data-fragment-index="4">
+              Mobile OS
+              <div class="row">
+                <div class="deviceapi column">Storage</div>
+                <div class="deviceapi column">Accelerometer</div>
+                <div class="deviceapi column">Notification</div>
+                <div class="deviceapi column">etc.</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h3>CLI Workflow</h3>
+          <div id="cordova-workflow">
+            <div class="step">cordova create</div>
+            ↓
+            <div class="step">cordova platform add</div>
+            ↓
+            <div class="step">cordova plugin add</div>
+            ↓
+            <div class="step">cordova run</div>
+            ↓
+            <div class="step">cordova build</div>
+          </div>
+        </section>
+
+        <section data-transition="slide-in fade-out">
+          <h3>Projekt erstellen</h3>
+          <div class="cordova-step">
+            <div class="cordova-command">
+              cordova create hello ch.puzzle.hello \<br>"Hello World"
+            </div>
+            ↓
+            <div class="cordova-projectdir">
+              config.xml<br>
+              hooks/<br>
+              platforms/<br>
+              plugins/<br>
+              www/
+            </div>
+          </div>
+        </section>
+
+        <section data-transition="fade-in fade-out">
+          <h3>Plattformen</h3>
+          Amazon Fire OS<br>
+          Android<br>
+          BlackBerry 10<br>
+          Firefox OS<br>
+          iOS<br>
+          Ubuntu<br>
+          Windows Phone 8/8.1<br>
+          Windows 8/8.1<br>
+          Tizen
+        </section>
+
+        <section data-transition="fade-in fade-out">
+          <h3>Plattformen hinzufügen</h3>
+          <div class="cordova-step">
+            <div class="cordova-command">
+              cordova platform add android<br>
+              cordova platform add ios
+            </div>
+            ↓
+            <div class="cordova-projectdir muted">
+              config.xml<br>
+              hooks/<br>
+              platforms/<br>
+              <div class="highlight indented">
+                android/<br>
+                ios/<br>
+              </div>
+              plugins/<br>
+              www/
+            </div>
+          </div>
+        </section>
+
+        <section data-transition="fade-in fade-out">
+          <h3>Plugins</h3>
+          <div class="row">
+            <div class="column">
+              Accelerometer<br>
+              BatteryStatus<br>
+              Camera<br>
+              Capture<br>
+              Compass<br>
+              Connection<br>
+              Contacts
+            </div>
+            <div class="column">
+              Device<br>
+              Events<br>
+              File<br>
+              File Transfer<br>
+              Geolocation<br>
+              Globalization<br>
+              InAppBrowser
+            </div>
+            <div class="column">
+              Media<br>
+              Notification<br>
+              Splashscreen<br>
+              Status Bar<br>
+              Storage<br>
+              Vibration<br>
+              ...
+            </div>
+          </div>
+          <br>
+          <small>
+            Registry: <a href="https://cordova.apache.org/plugins">cordova.apache.org/plugins/</a><br>
+            Platform Support: <a href="https://cordova.apache.org/docs/en/edge/guide/support/index.html">cordova.apache.org → Documentation</a>
+          </small>
+        </section>
+
+        <section data-transition="fade-in fade-out">
+          <h3>Plugins hinzufügen</h3>
+          <div class="cordova-step plugins">
+            <div class="cordova-command">
+              cordova plugin add \<br> cordova-plugin-device-motion --save
+            </div>
+            ↓
+            <div class="cordova-projectdir muted">
+              config.xml<br>
+              hooks/<br>
+              platforms/<br>
+              plugins/<br>
+              <div class="highlight indented">
+                cordova-plugin-device-motion/
+              </div>
+              www/
+            </div>
+          </div>
+        </section>
+
+        <section data-transition="fade-in fade-out">
+          <img src="lib/img/tech-logos/colorshake.svg"><br>
+          Color Shake
+        </section>
+
+        <section id="example" data-transition="fade-in slide-out">
+          <h3>Implementation</h3>
+          <pre><code class="html"><script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript">
+  var r, g, b;
+
+  document.addEventListener('deviceready', onDeviceReady, false);
+
+  function onDeviceReady() {
+    var options = { frequency: 20 }; // Milliseconds
+    navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
+  }
+
+  function onSuccess(acceleration) {
+    r = Math.round(Math.abs(acceleration.x) / 20 * 255),
+    g = Math.round(Math.abs(acceleration.y) / 20 * 255),
+    b = Math.round(Math.abs(acceleration.z) / 20 * 255),
+    document.body.style.backgroundColor = 'rgb(' + [r, g, b].join(',') + ')';
+  }
+
+  function onError() {
+    // Some error happened
+  }
+</script></code></pre>
+        </section>
+
+        <section data-transition="fade-in fade-out">
+          <h3>App bauen</h3>
+          <div class="cordova-step build">
+            <div class="cordova-command">
+              cordova build android
+            </div>
+            ↓
+            <div class="cordova-projectdir muted build">
+              config.xml<br>
+              hooks/<br>
+              platforms/<br>
+              <div class="highlight indented">
+                android/
+                <div class="indented">
+                  build/outputs/apk/
+                  <div class="indented">
+                    android-debug.apk
+                  </div>
+                </div>
+              </div>
+              plugins/<br>
+              www/
+            </div>
+          </div>
+
+        </section>
+
+        <section data-transition="fade-in fade-out">
+          <h3>Testen der App</h3>
+          <ol>
+            <li>Emulator</li>
+            <li>Gerät</li>
+            <li>Browser</li>
+          </ol>
+        </section>
+
+        <section data-transition="fade-in fade-out">
+          <h3>Testen im Emulator</h3>
+          <div class="cordova-step">
+            <div class="cordova-command">
+              cordova emulate android
+            </div>
+          </div>
+
+        </section>
+
+        <section data-transition="fade-in fade-out">
+          <h3>Testen auf dem Gerät</h3>
+          <div class="cordova-step">
+            <div class="cordova-command">
+              cordova run android
+            </div>
+          </div>
+          <br>
+          USB<br>
+          Echte Umgebung<br>
+          Remote Debugging
+
+        </section>
+
+        <section data-transition="fade-in fade-out">
+          <h3>Testen im Browser</h3>
+          <div class="cordova-step browser">
+            <div class="row">
+              <div class="column">
+                <img src="lib/img/tech-logos/grunt.svg"><br>
+                Grunt
+              </div>
+              <div class="column">
+                <img src="lib/img/tech-logos/gulp.svg"><br>
+                Gulp
+              </div>
+              <div class="column">
+                <img src="lib/img/tech-logos/webpack.svg"><br>
+                Webpack
+              </div>
+            </div>
+          </div>
+
+        </section>
+
+        <section class="master04">
+          <h1>Reale Anwendung:</h1>
+          LOPAS (Lok Personal Assistenz) für BLS AG
+
+        </section>
+
+        <section>
+          <h3>Wechsel der Plattform</h3>
+          <div class="row">
+            <div class="column">
+              <img src="lib/img/photos/dis.jpg" width="100%"><br>
+              <small>
+                Windows Netbook<br>
+                Java Swing Client
+              </small>
+            </div>
+            <div class="column">
+              <img src="lib/img/photos/lopas.jpg" width="100%"><br>
+              <small>
+                Android Tablet<br>
+                Angular Cordova App
+              </small>
+            </div>
+          </div>
+          <div class="source" style="clear: both;"><br>Fotos: Roland Schwarzentrub, BLS AG</div>
+
+        </section>
+
+        <section data-transition="slide-in fade-out">
+          <h3>Dienstplan</h3>
+          <img src="lib/img/photos/lopas-serviceplan.png" class="lopas-screenshot">
+
+        </section>
+
+        <section data-transition="fade-in fade-out">
+          <h3>Zugfahrordnung</h3>
+          <img src="lib/img/photos/lopas-train.png" class="lopas-screenshot">
+
+        </section>
+
+        <section data-transition="fade-in fade-out">
+          <h3>Nachtmodus</h3>
+          <img src="lib/img/photos/lopas-train-night.png" class="lopas-screenshot">
+
+        </section>
+
+        <section>
+          <h3>Wieso als Hybrid App?</h3>
+          Web Know-how<br>
+          <br>
+          Distribution<br>
+          Storage Verschlüsselung<br>
+          Screen Lock<br>
+          Helligkeit
+
+        </section>
+
+        <section class="master03">
+          <h1>Quintessenz</h1>
+
+        </section>
+
+        <section>
+          <h2>Nachteile von Hybrid Apps</h2>
+          <div class="row">
+            <div class="column">
+              <h3>gegenüber Native</h3>
+              Performance<br>
+              Native UI & feel<br>
+              Plattformsupport<br>
+            </div>
+            <div class="column">
+              <h3>gegenüber Web</h3>
+              Deployment<br>
+              <br>
+              <br>
+            </div>
+          </div>
+
+        </section>
+
+        <section>
+          <h2>Vorteile von Hybrid Apps</h2>
+          <div class="row">
+            <div class="column">
+              <h3>gegenüber Native</h3>
+              Web Know-how<br>
+              Plattformunabhängig<br>
+              Entwicklungskosten<br>
+            </div>
+            <div class="column">
+              <h3>gegenüber Web</h3>
+              Native Features<br>
+              App Store<br>
+              <br>
+            </div>
+          </div>
+
+        </section>
+
+        <section>
+          <h3>Open Device Lab Bern @ Puzzle</h3>
+          <img src="lib/img/photos/devicelab2.jpg" width="70%">
+          <br><small>→ <a href="http://opendevicelabbern.ch">opendevicelabbern.ch</a></small>
+
+        </section>
+
+        <section class="master01">
+          <h1>Fragen?</h1>
+          <div class="row" style="align-items: flex-start;">
+            <div class="column">
+              <a href="https://github.com/hupf/colorshake/raw/master/dist/colorshake.apk" style="background: none;">
+                <img src="lib/img/photos/colorshake-qrcode.gif" style="width: 3em; image-rendering: crisp-edges; image-rendering: -moz-crisp-edges;">
+              </a><br>
+              <a href="https://github.com/hupf/colorshake">github.com/hupf/<br>↪ colorshake/</a><br>
+              <br>
+              <a href="https://cordova.apache.org/">cordova.apache.org</a><br>
+              <a href="yeoman.io/generators/">yeoman.io/generators/</a><br>
+              <br>
+            </div>
+            <div class="column">
+              <img src="lib/img/photos/mathis.jpg" class="author-img"><br>
+              Mathis Hofer<br>
+              <a href="mailto:hofer@puzzle.ch">hofer@puzzle.ch</a><br>
+            </div>
+          </div>
+        </section>
+      </div>
+
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+    <script src="js/SVGinject.js"></script>
+    <script src="lib/js/chartist.js"></script>
+    <script src="lib/js/custom.js"></script>
+
+    <script>
+
+     // Full list of configuration options available at:
+     // https://github.com/hakimel/reveal.js#configuration
+     Reveal.initialize({
+         controls: true,
+         progress: false,
+         history: true,
+         center: true,
+
+         transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+         // Optional reveal.js plugins
+         dependencies: [
+             { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+             /*           { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } }, */
+             /*           { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } }, */
+             { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+             { src: 'plugin/zoom-js/zoom.js', async: true },
+             { src: 'plugin/notes/notes.js', async: true }
+         ]
+     });
+
+    </script>
+
+  </body>
+</html>
